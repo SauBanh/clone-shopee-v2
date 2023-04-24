@@ -1,0 +1,30 @@
+{
+    "name": "clone-shopee-v2",
+    "version": "1.0.0",
+    "description": "create a website with handle create update read deletea and handle cart with add product and delete product",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SauBanh/clone-shopee-v2.git"
+    },
+    "keywords": [],
+    "author": "Nguyễn Tuấn Anh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SauBanh/clone-shopee-v2/issues"
+    },
+    "homepage": "https://github.com/SauBanh/clone-shopee-v2#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "express": "^4.18.2",
+        "express-handlebars": "^7.0.7",
+        "pug": "^3.0.2"
+    }
+}
