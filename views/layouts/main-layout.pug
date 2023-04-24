@@ -10,7 +10,7 @@ html(lang="en")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&family=Roboto:wght@300;400&display=swap")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==", crossorigin="anonymous",referrerpolicy="no-referrer")
         link(rel="stylesheet", href="/css/base.css")
-        link(rel="stylesheet", href="/css/main.css")
+        block style
         link(rel="stylesheet", href="/css/grid.css")
         link(rel="stylesheet", href="/css/responsive.css")
     body 
@@ -244,13 +244,71 @@ html(lang="en")
                                                 .header_cart-item-body
                                                     span.header_cart-item-description Phân loại: Thiết bị công nghệ
                                                     span.header_cart-item-remove Xóa
-                                    a.header_cart-view-cart.btn.btn-primary(href='#') Xem gi&#x1ECF; h&agrave;ng
+                                    a.header_cart-view-cart.btn.btn-primary(href='/cart') Xem giỏ hàng
                 ul.header_sort-bar
                     li.header_sort-item
-                    a.header_sort-link(href='') Li&ecirc;n quan
+                        a.header_sort-link(href='') Li&ecirc;n quan
                     li.header_sort-item.header_sort-item-active
-                    a.header_sort-link(href='') M&#x1EDB;i nh&#x1EA5;t
+                        a.header_sort-link(href='') M&#x1EDB;i nh&#x1EA5;t
                     li.header_sort-item
-                    a.header_sort-link(href='') B&aacute;n ch&#x1EA1;y
+                        a.header_sort-link(href='') B&aacute;n ch&#x1EA1;y
                     li.header_sort-item
-                    a.header_sort-link(href='') Gi&aacute;
+                        a.header_sort-link(href='') Gi&aacute;
+            block content
+            footer.footer
+                .grid.wide.footer_content
+                    .row
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading CHĂM SÓC KHÁCH HÀNG
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='') Trung tâm trợ giúp
+                                li.footer-item
+                                    a.footer-item-link(href='') Sáu Bảnh đẹp trai Mail
+                                li.footer-item
+                                    a.footer-item-link(href='') Hướng dẫn mua hàng
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading GIỚI THIỆU
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='') Giới thiệu
+                                li.footer-item
+                                    a.footer-item-link(href='') Tuyển dụng
+                                li.footer-item
+                                    a.footer-item-link(href='') Điều khoản
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading Danh mục
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='') Trung tâm trợ giúp
+                                li.footer-item
+                                    a.footer-item-link(href='') Sáu Bảnh đẹp trai Mail
+                                li.footer-item
+                                    a.footer-item-link(href='') Hướng dẫn mua hàng
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading Theo dõi
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='')
+                                        i.footer-item-icon.fa-brands.fa-facebook
+                                        | Facebook
+                                li.footer-item
+                                    a.footer-item-link(href='')
+                                        i.footer-item-icon.fa-brands.fa-instagram
+                                        | Instgram
+                                li.footer-item
+                                    a.footer-item-link(href='')
+                                        i.footer-item-icon.fa-brands.fa-linkedin
+                                        | Linkedin
+                        .col.l-2-4.m-8.c-12
+                            h3.footer_heading VÀO CỬA HÀNG TRÊN ỨNG DỤNG
+                            .footer_download
+                                img.footer_download-pr(src='./img/qrcode.png', alt='download QR')
+                                .footer_download-apps
+                                    a.footer_download-apps-link(href='')
+                                        img.footer_download-app-img(src='./img/lg1.png', alt='Google play')
+                                    a.footer_download-apps-link(href='')
+                                        img.footer_download-app-img(src='./img/lg2.png', alt='App store')
+                .footer_bottom
+                    .grid.wide
+                        p.footer_text ⓈⒷ-2022 Nguyễn Tuấn Anh Web Developer

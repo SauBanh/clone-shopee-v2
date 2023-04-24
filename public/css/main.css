@@ -1286,6 +1286,9 @@ i.home-product-item_like-icon-fill {
     text-align: center;
     padding: 4px 0;
     border-top-right-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .home-product-item_sale-off-percent {
