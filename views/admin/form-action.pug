@@ -8,33 +8,31 @@ block content
         .grid.wide
             main 
                 h2.title-form Add Product
-                form.product-form(action="/admin/add-product", method="POST")
+                form.product-form(action=editing ? '/admin/edit-product' : '/admin/add-product', method="POST")
                     .form-control
                         label(for="title") Title
-                        input#title(type="text", name="title", required, placeholder="title")
+                        input#title(type="text", name="title", required, placeholder="title", value=editing ? product.title : undefined)
                     .form-control
                         label(for="imageUrl") Image Url
-                        input#imageUrl(type="url", name="imageUrl", required, placeholder="imageUrl")
+                        input#imageUrl(type="url", name="imageUrl", required, placeholder="imageUrl", value=editing ? product.imgUrl : undefined)
                     .form-control
                         label(for="price") Price
-                        input#price(type="number", name="price", required, placeholder="price" min="1" step="1")
+                        input#price(type="number", name="price", required, placeholder="price" min="1" step="1", value=editing ? product.price : undefined)
                     .form-control
                         label(for="discount") discount
-                        input#discount(type="number", name="discount", required, placeholder="discount" min="1" max="100" step="1")
+                        input#discount(type="number", name="discount", required, placeholder="discount" min="1" max="100" step="1", value=editing ? product.discount : undefined)
                     .form-control
                         label(for="location") Vị trí
-                        input#location(type="text", name="location", required, placeholder="location")
+                        input#location(type="text", name="location", required, placeholder="location", value=editing ? product.location : undefined)
                     .form-control
                         label(for="description") Description
-                        textarea#description(type="text", name="description", required, placeholder="description", rows="5") 
-                        select(name='type', value='Thời trang', required)
-                            option(value='Thời trang') Thời trang
-                            option(value='Đồ dùng học tập') Đồ dùng học tập
-                            option(value='Mỹ phẩm') Mỹ phẩm
-                            option(value='Thiết bị công nghệ') Thiết bị công nghệ
-                            option(value='Trang sức') Trang sức
+                        textarea#description(type="text", name="description", required, placeholder="description", rows="5") #{editing ? product.description : undefined} 
+                        select.choice(name='type', value=editing ? product.type : 'Thời trang', required)
+                            option(value='Thời trang', selected=(editing && product.type === 'Thời trang')) Thời trang
+                            option(value='Đồ dùng học tập', selected=(editing && product.type === 'Đồ dùng học tập')) Đồ dùng học tập
+                            option(value='Mỹ phẩm', selected=(editing && product.type === 'Mỹ phẩm')) Mỹ phẩm
+                            option(value='Thiết bị công nghệ', selected=(editing && product.type === 'Thiết bị công nghệ')) Thiết bị công nghệ
+                            option(value='Trang sức', selected=(editing && product.type === 'Trang sức')) Trang sức
                     if editing
                         input(type="hidden", value=product.id, name="productId")
-                        button.btn(type="submit") Update Product
-                    else
-                        button.btn(type="submit") Add Product
+                    button.btn(type="submit") #{editing ? 'Update Product' : 'Add Product'}

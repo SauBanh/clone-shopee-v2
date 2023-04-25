@@ -37,7 +37,7 @@ block content
                                             span.home-product-item_sale-off-percent #{product.discount}%
                                             span.home-product-item_sale-off-lable GIẢM
                                         .action-form 
-                                            a.btn-action(href="") Edit
+                                            a.btn-action(href=`/admin/edit-product/${product.id}?edit=true`) Edit
                                             form.action-form-btn(action="", method="post") 
                                                 button.btn-action(type="submit") Delete
                     else 

@@ -1,7 +1,7 @@
 const Product = require("../models/productModel");
 
 exports.getAddProduct = (req, res, next) => {
-    res.render("admin/form-action");
+    res.render("admin/form-action", { editing: false });
 };
 
 exports.postAddProduct = (req, res, next) => {
@@ -30,6 +30,23 @@ exports.getProducts = (req, res, next) => {
     Product.fetchAll((products) => {
         res.render("admin/list-products", {
             products: products,
+        });
+    });
+};
+
+exports.getEditProduct = (req, res, next) => {
+    const editMode = req.query.edit;
+    if (!editMode) {
+        res.redirect("/");
+    }
+    const productId = req.params.productId;
+    Product.findById(productId, (product) => {
+        if (!product) {
+            return res.redirect("/");
+        }
+        res.render("admin/form-action", {
+            product: product,
+            editing: editMode,
         });
     });
 };
