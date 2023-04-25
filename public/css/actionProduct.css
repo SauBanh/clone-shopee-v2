@@ -1,0 +1,55 @@
+main {
+    padding: 1rem;
+    margin: auto;
+}
+
+form {
+    display: inline;
+}
+
+.product-form {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    padding: 5px 2px;
+}
+
+.form-control input,
+.form-control textarea {
+    border: 1px solid #a1a1a1;
+    /* font: inherit; */
+    border-radius: 2px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline-color: var(--primary-color);
+}
+
+.title-form {
+    font-size: 18px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}

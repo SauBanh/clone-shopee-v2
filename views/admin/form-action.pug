@@ -1,0 +1,40 @@
+extends ../layouts/main-layout.pug
+
+block style
+    link(rel="stylesheet", href="/css/actionProduct.css")
+
+block content
+    .app_container
+        .grid.wide
+            main 
+                h2.title-form Add Product
+                form.product-form(action="/admin/add-product", method="POST")
+                    .form-control
+                        label(for="title") Title
+                        input#title(type="text", name="title", required, placeholder="title")
+                    .form-control
+                        label(for="imageUrl") Image Url
+                        input#imageUrl(type="url", name="imageUrl", required, placeholder="imageUrl")
+                    .form-control
+                        label(for="price") Price
+                        input#price(type="number", name="price", required, placeholder="price" min="1" step="1")
+                    .form-control
+                        label(for="discount") discount
+                        input#discount(type="number", name="discount", required, placeholder="discount" min="1" max="100" step="1")
+                    .form-control
+                        label(for="location") Vị trí
+                        input#location(type="text", name="location", required, placeholder="location")
+                    .form-control
+                        label(for="description") Description
+                        textarea#description(type="text", name="description", required, placeholder="description", rows="5") 
+                        select(name='type', value='Thời trang', required)
+                            option(value='Thời trang') Thời trang
+                            option(value='Đồ dùng học tập') Đồ dùng học tập
+                            option(value='Mỹ phẩm') Mỹ phẩm
+                            option(value='Thiết bị công nghệ') Thiết bị công nghệ
+                            option(value='Trang sức') Trang sức
+                    if editing
+                        input(type="hidden", value=product.id, name="productId")
+                        button.btn(type="submit") Update Product
+                    else
+                        button.btn(type="submit") Add Product

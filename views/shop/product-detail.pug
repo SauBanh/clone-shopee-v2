@@ -1,9 +1,67 @@
 extends ../layouts/main-layout.pug
 
 block style
-    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/productDetail.css")
 
 block content
-    .app_container
-        .grid.wide
-            h1 Product Detail Page
+    .grid.wide.product-box
+        .product-detail
+            .row.sm-gutter
+                .col.l-5.m-5.c-0
+                    .img-product(style=`background-image: url(${product.imgUrl})`)
+                .col.l-7.m-5.c-0
+                    h2.product-title #{product.title}
+                    .product-price 
+                        h4.price-old #{(product.price).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                        h3.price-sales #{(product.price * (1 - (product.discount/100))).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                        span.product-sales #{product.discount} % GIẢM
+                    .product-type-content
+                        span.title-v2 Phân loại: 
+                        |#{product.type}
+                    .product-location 
+                        span.title-v2 Vị trí Shop: 
+                        |#{product.location}
+                    .product-button 
+                        button.btn-cart 
+                            i.fa-solid.fa-cart-shopping
+                            |Thêm vào giỏ hàng 
+                        button.buy-product Mua ngay
+                .product-detail-content
+                    h3.header-desc-product Mô tả sản phẩm
+                    p.product-description #{product.description}
+        .home-product.more-product
+            .product-detail
+                h1 Các sản phẩm khác
+                if products.length > 0
+                    .row.sm-gutter
+                        each product in products
+                            .col.l-2-4.m-4.c-6
+                                // Product item
+                                a.home-product-item(href=`/product/${product.id}`)
+                                    .home-product-item_img(style=`background-image: url(${product.imgUrl})`)
+                                    h5.home-product-item_name #{product.title}
+                                    .home-product-item_price
+                                        span.home-product-item_price-old #{(product.price).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                        span.home-product-item_price-current #{(product.price * (1 - (product.discount/100))).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                    .home-product-item_action
+                                        span.home-product-item_like.home-product-item_like-liked
+                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
+                                            i.home-product-item_like-icon-fill.fa-solid.fa-hearts
+                                        .home-product-item_rating
+                                            i.home-product-item_star-gold.fa-solid.fa-star
+                                            i.home-product-item_star-gold.fa-solid.fa-star
+                                            i.home-product-item_star-gold.fa-solid.fa-star
+                                            i.home-product-item_star-gold.fa-solid.fa-star
+                                            i.fa-solid.fa-star
+                                        span.home-product-item__sold sale
+                                    .home-product-item_origin
+                                        span.home-product-item_brand Được yêu thích
+                                        span.home-product-item_origin-name #{product.location}
+                                    .home-product-item_favourite
+                                        i.fa-solid.fa-check
+                                        span Yêu thích
+                                    .home-product-item_sale-off
+                                        span.home-product-item_sale-off-percent #{product.discount}%
+                                        span.home-product-item_sale-off-lable GIẢM
+                else 
+                    h2.text-no-product Hiện tại chưa có sản phẩm để hiển thị

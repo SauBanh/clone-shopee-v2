@@ -4,15 +4,16 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Shopee
         link(rel="shortcut icon", href="/img/favicon.png", type="image/png")
+        title Shopee
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&family=Roboto:wght@300;400&display=swap")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==", crossorigin="anonymous",referrerpolicy="no-referrer")
         link(rel="stylesheet", href="/css/base.css")
-        block style
+        link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/grid.css")
         link(rel="stylesheet", href="/css/responsive.css")
+        block style
     body 
         .app 
             header.header
@@ -36,7 +37,7 @@ html(lang="en")
                         ul.header_navbar-list
                             li.header_navbar-item.header_navbar-item-has-notify
                                 a.header_navbar-item-link(href='')
-                                    i.header_navbar-icon.fa-solid.fa-bell
+                                    i.header_navbar-icon.fa-regular.fa-bell
                                     | Thông báo
                                 .header_notify
                                     header.header_notify-header
@@ -76,7 +77,7 @@ html(lang="en")
                                         a.header_notify-footer-btn(href='') Xem tất cả
                             li.header_navbar-item
                                 a.header_navbar-item-link(href='')
-                                    i.header_navbar-icon.fa-solid.fa-circle-question
+                                    i.header_navbar-icon.fa-regular.fa-circle-question
                                     | Trợ giúp
                             //
                             //- <li class="header_navbar-item header_navbar-item--strong header_navbar-item--senparate">Đăng ký</li>
@@ -85,6 +86,10 @@ html(lang="en")
                                 img.header_navbar-user-img(src='/img/avata.jpg' alt='')
                                 span.header_navbar-user-name Nguyễn Tuấn Anh
                                 ul.header_navbar-user-menu
+                                    li.header_navbar-user-item
+                                        a(href='/admin/products') Danh sách sản phẩm
+                                    li.header_navbar-user-item
+                                        a(href='/admin/add-product') Thêm sản phẩm
                                     li.header_navbar-user-item
                                         a(href='') Tài Khoản của tôi
                                     li.header_navbar-user-item
@@ -254,7 +259,8 @@ html(lang="en")
                         a.header_sort-link(href='') B&aacute;n ch&#x1EA1;y
                     li.header_sort-item
                         a.header_sort-link(href='') Gi&aacute;
-            block content
+            .app_container
+                block content
             footer.footer
                 .grid.wide.footer_content
                     .row
@@ -303,12 +309,12 @@ html(lang="en")
                         .col.l-2-4.m-8.c-12
                             h3.footer_heading VÀO CỬA HÀNG TRÊN ỨNG DỤNG
                             .footer_download
-                                img.footer_download-pr(src='./img/qrcode.png', alt='download QR')
+                                img.footer_download-pr(src='/img/qrcode.png', alt='download QR')
                                 .footer_download-apps
                                     a.footer_download-apps-link(href='')
-                                        img.footer_download-app-img(src='./img/lg1.png', alt='Google play')
+                                        img.footer_download-app-img(src='/img/lg1.png', alt='Google play')
                                     a.footer_download-apps-link(href='')
-                                        img.footer_download-app-img(src='./img/lg2.png', alt='App store')
+                                        img.footer_download-app-img(src='/img/lg2.png', alt='App store')
                 .footer_bottom
                     .grid.wide
                         p.footer_text ⓈⒷ-2022 Nguyễn Tuấn Anh Web Developer

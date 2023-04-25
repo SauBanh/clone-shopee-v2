@@ -1,351 +1,101 @@
 extends ../layouts/main-layout.pug
 
-block style
-    link(rel="stylesheet", href="/css/main.css")
-
 block content
-    .app_container
-        .grid.wide
-            .row.sm-gutter.app_content
-                .col.l-2.m-0.c-0
-                    nav.category
-                        h3.category_heading Danh mục
-                        ul.category-list
-                            li.category-item.category-item-active
-                                a.category-item_link(href='') Thời trang
-                            li.category-item
-                                a.category-item_link(href='') Đồ dùng học tập
-                            li.category-item
-                                a.category-item_link(href='') Mỹ Phẩm
-                            li.category-item
-                                a.category-item_link(href='') Thiết Bị Công Nghệ
-                            li.category-item
-                                a.category-item_link(href='') Trang sức
-                .clo.l-10.m-12.m-12
-                    .home-filter.hide-on-mobile-table
-                        span.home-filter_lable Sắp xếp theo
-                        button.home-filter-btn.btn Phổ biến
-                        button.home-filter-btn.btn.btn-primary Mới nhất
-                        button.home-filter-btn.btn Bán chạy
-                        .select-input
-                            span.select-input_lable Giá
-                            i.select-input_icon.fa-solid.fa-angle-down
-                            // list option
-                            ul.select-input_list
-                                li.select-input_item
-                                    a.select-input_link(href='') Giá từ thấp tới cao
-                                li.select-input_item
-                                    a.select-input_link(href='') Giá từ cao xuống thấp
-                        .home-filter_page
-                            span.home-filter_page-num
-                                span.home-filter_page-current 1/14
-                            .home-filter_page-control
-                                a.home-filter_page-btn.home-filter_page-btn-disabled(href='')
-                                    i.home-filter_page-icon.fa-solid.fa-angle-left
-                                a.home-filter_page-btn(href='')
-                                    i.home-filter_page-icon.fa-solid.fa-angle-right
-                    nav.mobile-category
-                        ul.mobile-category_list
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Đồ dùng học tập
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Mỹ phẩm
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Thiết bị công nghệ
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Thiết bị thể dục
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Dụng cụ sửa xe
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Quần áo nam
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Quần áo nữ
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Điện thoại phụ kiện
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Đồng hồ
-                            li.mobile-category_item
-                                a.mobile-category_link(href='') Thể thao du lịch
-                    .home-product
-                        // grid - row - column
+    .grid.wide
+        .row.sm-gutter.app_content
+            .col.l-2.m-0.c-0
+                nav.category
+                    h3.category_heading Danh mục
+                    ul.category-list
+                        li.category-item.category-item-active
+                            a.category-item_link(href='') Tất cả
+                        li.category-item
+                            a.category-item_link(href='') Thời trang
+                        li.category-item
+                            a.category-item_link(href='') Đồ dùng học tập
+                        li.category-item
+                            a.category-item_link(href='') Mỹ Phẩm
+                        li.category-item
+                            a.category-item_link(href='') Thiết Bị Công Nghệ
+                        li.category-item
+                            a.category-item_link(href='') Trang sức
+            .clo.l-10.m-12.m-12
+                .home-filter.hide-on-mobile-table
+                    span.home-filter_lable Sắp xếp theo
+                    button.home-filter-btn.btn Phổ biến
+                    button.home-filter-btn.btn.btn-primary Mới nhất
+                    button.home-filter-btn.btn Bán chạy
+                    .select-input
+                        span.select-input_lable Giá
+                        i.select-input_icon.fa-solid.fa-angle-down
+                        // list option
+                        ul.select-input_list
+                            li.select-input_item
+                                a.select-input_link(href='') Giá từ thấp tới cao
+                            li.select-input_item
+                                a.select-input_link(href='') Giá từ cao xuống thấp
+                    .home-filter_page
+                        span.home-filter_page-num
+                            span.home-filter_page-current 1/14
+                        .home-filter_page-control
+                            a.home-filter_page-btn.home-filter_page-btn-disabled(href='')
+                                i.home-filter_page-icon.fa-solid.fa-angle-left
+                            a.home-filter_page-btn(href='')
+                                i.home-filter_page-icon.fa-solid.fa-angle-right
+                nav.mobile-category
+                    ul.mobile-category_list
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Đồ dùng học tập
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Mỹ phẩm
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Thiết bị công nghệ
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Thiết bị thể dục
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Dụng cụ sửa xe
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Quần áo nam
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Quần áo nữ
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Điện thoại phụ kiện
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Đồng hồ
+                        li.mobile-category_item
+                            a.mobile-category_link(href='') Thể thao du lịch
+                .home-product
+                    // grid - row - column
+                    if products.length > 0
                         .row.sm-gutter
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app1.png)')
-                                    h5.home-product-item_name Nhẫn trang sức đẹp
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 350.000đ
-                                        span.home-product-item_price-current 315.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app2.png)')
-                                    h5.home-product-item_name Giày nam thể thao trẻ trung năng động
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 400.000đ
-                                        span.home-product-item_price-current 360.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app3.png)')
-                                    h5.home-product-item_name Balo thời trang
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 300.000đ
-                                        span.home-product-item_price-current 270.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app4.png)')
-                                    h5.home-product-item_name Trang sức trắng mịn da
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 550.000đ
-                                        span.home-product-item_price-current 495.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app5.png)')
-                                    h5.home-product-item_name Kệ để sách treo tường
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 320.000đ
-                                        span.home-product-item_price-current 288.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app6.png)')
-                                    h5.home-product-item_name Notebook ghi chú
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 100.000đ
-                                        span.home-product-item_price-current 90.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app7.png)')
-                                    h5.home-product-item_name Bút bi mực xanh
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 50.000đ
-                                        span.home-product-item_price-current 45.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app8.png)')
-                                    h5.home-product-item_name Tai nghe bluetooth chùm tai
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 900.000đ
-                                        span.home-product-item_price-current 810.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app9.png)')
-                                    h5.home-product-item_name Điện thoại samsung galaxy s21 ultra
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 39.000.000đ
-                                        span.home-product-item_price-current 35.100.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
-                            .col.l-2-4.m-4.c-6
-                                // Product item
-                                a.home-product-item(href='')
-                                    .home-product-item_img(style='background-image: url(/img/app10.png)')
-                                    h5.home-product-item_name iPhone 12 Pro Max 128Gb
-                                    .home-product-item_price
-                                        span.home-product-item_price-old 26.000.000đ
-                                        span.home-product-item_price-current 23.400.000đ
-                                    .home-product-item_action
-                                        span.home-product-item_like.home-product-item_like-liked
-                                            i.home-product-item_like-icon-empty.fa-regular.fa-heart
-                                            i.home-product-item_like-icon-fill.fa-solid.fa-heart
-                                        .home-product-item_rating
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.home-product-item_star-gold.fa-solid.fa-star
-                                            i.fa-solid.fa-star
-                                        span.home-product-item__sold sale
-                                    .home-product-item_origin
-                                        span.home-product-item_brand Được yêu thích
-                                        span.home-product-item_origin-name Hồ Chí Minh
-                                    .home-product-item_favourite
-                                        i.fa-solid.fa-check
-                                        span Yêu thích
-                                    .home-product-item_sale-off
-                                        span.home-product-item_sale-off-percent 10%
-                                        span.home-product-item_sale-off-lable GIẢM
+                            each product in products
+                                .col.l-2-4.m-4.c-6
+                                    // Product item
+                                    a.home-product-item(href=`/product/${product.id}`)
+                                        .home-product-item_img(style=`background-image: url(${product.imgUrl})`)
+                                        h5.home-product-item_name #{product.title}
+                                        .home-product-item_price
+                                            span.home-product-item_price-old #{(product.price).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                            span.home-product-item_price-current #{(product.price * (1 - (product.discount/100))).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                        .home-product-item_action
+                                            span.home-product-item_like.home-product-item_like-liked
+                                                i.home-product-item_like-icon-empty.fa-regular.fa-heart
+                                                i.home-product-item_like-icon-fill.fa-solid.fa-hearts
+                                            .home-product-item_rating
+                                                i.home-product-item_star-gold.fa-solid.fa-star
+                                                i.home-product-item_star-gold.fa-solid.fa-star
+                                                i.home-product-item_star-gold.fa-solid.fa-star
+                                                i.home-product-item_star-gold.fa-solid.fa-star
+                                                i.fa-solid.fa-star
+                                            span.home-product-item__sold sale
+                                        .home-product-item_origin
+                                            span.home-product-item_brand Được yêu thích
+                                            span.home-product-item_origin-name #{product.location}
+                                        .home-product-item_favourite
+                                            i.fa-solid.fa-check
+                                            span Yêu thích
+                                        .home-product-item_sale-off
+                                            span.home-product-item_sale-off-percent #{product.discount}%
+                                            span.home-product-item_sale-off-lable GIẢM
+                    else 
+                        h2.text-no-product Hiện tại chưa có sản phẩm để hiển thị

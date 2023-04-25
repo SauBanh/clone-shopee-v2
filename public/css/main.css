@@ -50,7 +50,7 @@
     list-style: none;
     border-radius: 2px;
     background-color: var(--white-color);
-    width: 160px;
+    width: 200px;
     padding-left: 0;
     z-index: 1;
     box-shadow: 0 1px 5px rgb(189, 189, 189);
@@ -922,6 +922,7 @@
 
 .app_container {
     background-color: #f5f5f5;
+    min-height: 500px;
 }
 
 .app_content {
@@ -1126,6 +1127,13 @@
     color: #ccc;
 }
 
+/* no product  */
+
+.text-no-product {
+    text-align: center;
+    font-size: 30px;
+}
+
 /* product item  */
 
 .home-product {
@@ -1289,6 +1297,28 @@ i.home-product-item_like-icon-fill {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.action-form {
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.action-form a,
+.action-form button {
+    text-decoration: none;
+    border: none;
+    padding: 5px 25px;
+    background-color: var(--primary-color);
+    font-size: 14px;
+    color: var(--white-color);
+    border-radius: 3px;
+}
+
+.action-form a:hover,
+.action-form button:hover {
+    background-color: var(--hover-color);
 }
 
 .home-product-item_sale-off-percent {
