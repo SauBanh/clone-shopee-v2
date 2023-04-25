@@ -2,6 +2,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 5656;
 
 // cấu hình cho ứng dụng
 app.set("view engine", "pug"); //cấu hình dạng mẫu sử dụng là pug
@@ -21,4 +22,4 @@ app.use(shopRouter); //route dành cho phía user
 app.use(errorController.get404);
 
 // khởi động phương thức để lắng nghe các sự kiện yêu cầu tới port 5656
-app.listen(5656);
+app.listen(port);
