@@ -22,9 +22,11 @@ block content
                         span.title-v2 Vị trí Shop: 
                         |#{product.location}
                     .product-button 
-                        button.btn-cart 
-                            i.fa-solid.fa-cart-shopping
-                            |Thêm vào giỏ hàng 
+                        form(action="/cart", method="POST") 
+                            input(type="hidden", name="productId", value=product.id)
+                            button.btn-cart 
+                                i.fa-solid.fa-cart-shopping
+                                |Thêm vào giỏ hàng 
                         button.buy-product Mua ngay
                 .product-detail-content
                     h3.header-desc-product Mô tả sản phẩm

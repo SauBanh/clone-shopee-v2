@@ -38,7 +38,8 @@ block content
                                             span.home-product-item_sale-off-lable GIẢM
                                         .action-form 
                                             a.btn-action(href=`/admin/edit-product/${product.id}?edit=true`) Edit
-                                            form.action-form-btn(action="", method="post") 
+                                            form.action-form-btn(action="/admin/delete-product", method="post")
+                                                input(type="hidden", name="productId", value=product.id)
                                                 button.btn-action(type="submit") Delete
                     else 
                         h2.text-no-product Hiện tại chưa có sản phẩm để hiển thị
